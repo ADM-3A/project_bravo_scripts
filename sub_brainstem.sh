@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# Either skull-stripped or whole-head T1w images can be used as "norm.mgz";
+# SynthSeg, SAMSEG or FastSurferVINN atlas segmemtation can be used as "aseg".
 for tp in before after; do
     for ij in {001..031} 033 034 {037..040}; do
         cp ${tp}/par-${ij}/mri/aseg.presurf.mgz \

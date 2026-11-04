@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# This section first use SynthSeg for whole-head segmentation.
 for tp in before after; do
 	for ij in {001..031} 033 034 {037..040}; do
 		mkdir -p ../SynthSegCerebNet/${tp}/par-${ij}/mri
@@ -21,6 +21,8 @@ done
 
 apptainer build /mnt/z/Alpha/PAR/fast-v2.4.2.sif docker://deepmi/fastsurfer:cpu-v2.4.2
 
+# This section then call CerebNet by changing entrypoint of the container to dedicated python script.
+# Specify "--cwd" explicitly for better performance.
 for tp in before after; do
     for ij in {001..031} 033 034 {037..040}; do
         apptainer exec \

@@ -10,6 +10,6 @@ Brainstem Subregions: Managed via FreeSurfer's segment_subregions brainstem comm
 
 # BTW
 
-Scripts ping_eno.sh is used to call containerized FreeSurfer v6.0.0 for "Euler number", which was used as image quality metrics in some paper. Only FreeSurfer v6.0.0 was validated for this purpose, the usefulness of later versions is unknown.
+Scripts ping_eno.sh is used to call containerized FreeSurfer v6.0.0 for "Euler number", which was used as image quality metrics in literature. Only FreeSurfer v6.0.0 was validated for this purpose, the usefulness of later versions is unknown.
 
 In case of error to yield hemispherical "Euler number", users can change into FreeSurfer subjects directory and run pong_eno.sh to extract with the command mris_euler_number.
